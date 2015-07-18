@@ -950,21 +950,21 @@ console.log("Running Bot Launcher!");
         sessionScore = Math.max(getCurrentScore(), sessionScore);
 
         var debugStrings = [];
-        debugStrings.push("Current Bot: " + window.botList[botIndex][0]);
-        debugStrings.push("T - Bot: " + (!toggle ? "On" : "Off"));
-        debugStrings.push("R - Lines: " + (!toggleDraw ? "On" : "Off"));
-        debugStrings.push("Q - Follow Mouse: " + (toggleFollow ? "On" : "Off"));
-        debugStrings.push("S - Manual Cell: " + (selectedCell == 0 ? "None" : selectedCell) + " of " + getPlayer().length);
+        debugStrings.push("Current: rootSUPP ");
+        debugStrings.push("Bot: " + (!toggle ? "On" : "Off"));
+        debugStrings.push("Vector: " + (!toggleDraw ? "On" : "Off"));
+        debugStrings.push("Mouse: " + (toggleFollow ? "On" : "Off"));
+        debugStrings.push("Manual Cell B.: " + (selectedCell == 0 ? "Ninguna" : selectedCell) + " de " + getPlayer().length);
         debugStrings.push("");
-        debugStrings.push("Best Score: " + ~~(sessionScore / 100));
-        debugStrings.push("Best Time: " + bestTime + " seconds");
+        debugStrings.push("Mejor puntuación: " + ~~(sessionScore / 100));
+        debugStrings.push("Mejor tiempo: " + bestTime + " segundos");
         debugStrings.push("");
         debugStrings.push(serverIP);
 
         if (getPlayer().length > 0) {
             var offsetX = -getMapStartX();
             var offsetY = -getMapStartY();
-            debugStrings.push("Location: " + Math.floor(getPlayer()[0].x + offsetX) + ", " + Math.floor(getPlayer()[0].y + offsetY));
+            debugStrings.push("Cordenadas: " + Math.floor(getPlayer()[0].x + offsetX) + ", " + Math.floor(getPlayer()[0].y + offsetY));
         }
 
         var offsetValue = 20;
@@ -1654,7 +1654,7 @@ console.log("Running Bot Launcher!");
                         ZW: "EU-London"
                     },
                     L = null;
-                d.connect = Ca;
+                d.connect = Cv;
 
                 //UPDATE
                 window.getDarkBool = function() {
