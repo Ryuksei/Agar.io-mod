@@ -788,7 +788,7 @@ console.log("Running Bot Launcher!");
 
         bestTime = Math.max(nbSeconds, bestTime);
 
-        var displayText = 'Score: ' + ~~(R / 100) + " Current Time: " + nbSeconds + " seconds.";
+        var displayText = 'Puntuación: ' + ~~(R / 100) + " Tiempo sobrevivido: " + nbSeconds + " segundos.";
 
         0 != R && (null == ua && (ua = new va(24, "#FFFFFF")), ua.C(displayText), c = ua.L(), a = c.width, f.globalAlpha = .2, f.fillStyle = "#000000", f.fillRect(10, r - 10 - 24 - 10, a + 10, 34), f.globalAlpha = 1, f.drawImage(c, 15, r -
             10 - 24 - 5));
@@ -950,11 +950,11 @@ console.log("Running Bot Launcher!");
         sessionScore = Math.max(getCurrentScore(), sessionScore);
 
         var debugStrings = [];
-        debugStrings.push("Current: rootSUPP ");
-        debugStrings.push("Bot: " + (!toggle ? "On" : "Off"));
-        debugStrings.push("Vector: " + (!toggleDraw ? "On" : "Off"));
-        debugStrings.push("Mouse: " + (toggleFollow ? "On" : "Off"));
-        debugStrings.push("Manual Cell B.: " + (selectedCell == 0 ? "Ninguna" : selectedCell) + " de " + getPlayer().length);
+        debugStrings.push("Ryuksei lo peta ");
+        debugStrings.push("(T) Bot: " + (!toggle ? "On" : "Off"));
+        debugStrings.push("(R) Vectores: " + (!toggleDraw ? "On" : "Off"));
+        debugStrings.push("(Q) Seguir al ratón: " + (toggleFollow ? "On" : "Off"));
+        debugStrings.push("(S) Cel. manual (Beta): " + (selectedCell == 0 ? "0" : selectedCell) + " de " + getPlayer().length);
         debugStrings.push("");
         debugStrings.push("Mejor puntuación: " + ~~(sessionScore / 100));
         debugStrings.push("Mejor tiempo: " + bestTime + " segundos");
