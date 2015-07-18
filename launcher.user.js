@@ -1271,7 +1271,7 @@ console.log("Running Bot Launcher!");
                 names = ["Ryuksei"],
                 originalName = names[Math.floor(Math.random() * names.length)],
                 sessionScore = 0,
-                serverIP = "ws://139.162.24.231:443",
+                serverIP = "",
                 interNodes = [],
                 lifeTimer = new Date(),
                 bestTime = 0,
