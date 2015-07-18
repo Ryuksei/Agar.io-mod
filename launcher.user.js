@@ -300,7 +300,7 @@ console.log("Running Bot Launcher!");
                 setTimeout(Za, 1E3)
             },
             success: function(b) {
-                a == Ba && (b = b.split("\n"), b[2] && alert(b[2]), Cv("ws://" + b[0], b[1]))
+                a == Ba && (b = b.split("\n"), b[2] && alert(b[2]), Ee("ws://" + b[0], b[1]))
             },
             dataType: "text",
             method: "POST",
@@ -314,7 +314,7 @@ console.log("Running Bot Launcher!");
         ya && y && (e("#connecting").show(), Za())
     }
 
-    function Cv(a, b) {
+    function Ee(a, b) {
         if (q) {
             q.onopen = null;
             q.onmessage = null;
@@ -1231,7 +1231,7 @@ console.log("Running Bot Launcher!");
                     d.encodeURIComponent(a));
                 e("#helloContainer").attr("data-party-state", "5");
                 Y(":party");
-                Cv("ws://" + b[0], a)
+                Ee("ws://" + b[0], a)
             },
             dataType: "text",
             method: "POST",
@@ -1654,7 +1654,7 @@ console.log("Running Bot Launcher!");
                         ZW: "EU-London"
                     },
                     L = null;
-                d.connect = Cv;
+                d.connect = Ee;
 
                 //UPDATE
                 window.getDarkBool = function() {
