@@ -950,11 +950,11 @@ console.log("Running Bot Launcher!");
         sessionScore = Math.max(getCurrentScore(), sessionScore);
 
         var debugStrings = [];
-        debugStrings.push("Ryuksei lo peta");
+        debugStrings.push("Ryuksei lo peta ");
         debugStrings.push("(T) Bot: " + (!toggle ? "On" : "Off"));
         debugStrings.push("(R) Vectores: " + (!toggleDraw ? "On" : "Off"));
         debugStrings.push("(Q) Seguir al ratón: " + (toggleFollow ? "On" : "Off"));
-        debugStrings.push("(S) Cel. manual: " + (selectedCell == 0 ? "0" : selectedCell) + " de " + getPlayer().length);
+        debugStrings.push("(S) Cel. manual (Beta): " + (selectedCell == 0 ? "0" : selectedCell) + " de " + getPlayer().length);
         debugStrings.push("");
         debugStrings.push("Mejor puntuación: " + ~~(sessionScore / 100));
         debugStrings.push("Mejor tiempo: " + bestTime + " segundos");
@@ -2315,6 +2315,27 @@ apos('create', 'UA-64394184-1', 'auto');
 apos('send', 'pageview');
 
 window.ignoreStream = false;
+window.refreshTwitch = function() {
+    $.ajax({
+        url: "https://api.twitch.tv/kraken/streams/apostolique",
+        cache: false,
+        dataType: "jsonp"
+    }).done(function(data) {
+        if (data["stream"] == null) {
+            //console.log("Apostolique is not online!");
+            window.setMessage([]);
+            window.onmouseup = function() {};
+            window.ignoreStream = false;
+        } else {
+            //console.log("Apostolique is online!");
+            if (!window.ignoreStream) {
+                window.setMessage(["twitch.tv/apostolique is online right now!", "Click the screen to open the stream!", "Press E to ignore."]);
+                window.onmouseup = function() {
+                    window.open("http://www.twitch.tv/apostolique");
+                };
+            }
+        }
+    }).fail(function() {});
 }
 setInterval(window.refreshTwitch, 60000);
 window.refreshTwitch();
